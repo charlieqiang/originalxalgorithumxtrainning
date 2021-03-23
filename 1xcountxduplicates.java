@@ -7,11 +7,26 @@
 // so your program should return [2, 1], because the 2 repeats before the 1 repeats.
 
 public class Solution {
-  /**
-   * @param nums: a integer array
-   * @return: return an integer denoting the number of non-unique(duplicate) values
-   */
-  public List<Integer> countduplicates(List<Integer> nums) {
-      // write your code here
-  }
+    /**
+     * @param nums: a integer array
+     * @return: return an integer denoting the number of non-unique(duplicate) values
+     */
+    public List<Integer> countduplicates(List<Integer> nums) {
+        // 1xforxreturn
+        List<Integer> res = new ArrayList<Integer>();
+        // 2xforx
+        Set<Integer> set = new HashSet<Integer>();
+        // 3xtraverse
+        for(int num : nums){
+            // 4xfindxthexnon-unique
+            if(!set.add(num)){
+	            // 5xavoidxduplicate
+                if(!res.contains(num)){
+	                // 6xaddxnum
+                    res.add(num);
+                }
+            }
+        }
+        return res;
+    }
 }
